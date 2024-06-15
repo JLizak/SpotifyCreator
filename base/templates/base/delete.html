@@ -1,0 +1,8 @@
+{% block content %}
+<form method="POST", >
+    {% csrf_token %}
+    <p>Are you suer to delete {{obj}}</p>
+    <input type="submit" value="confirm">
+</form>
+
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends "base/main.html" %}
+
+{% block content %}
+  <h1>Playlists</h1>
+  <div>
+    <div>
+      {% for playlist in playlists %}
+      <div>
+        <a href="/playlist/{{playlist.id}}">{{playlist.name}}</a>
+      </div>
+      {% endfor %}
+    </div>
+    <div>
+      <a href="{% url 'base:create-playlist' %}">Create Playlist</a>
+    </div>
+  </div>
+
+{% endblock content %}
