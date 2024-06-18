@@ -1,0 +1,12 @@
+/* Increase specificity */
+.appBar {
+  background-color: #127634 !important;
+}
+
+.menuButton {
+  margin-right: 16px !important;
+}
+
+.title {
+  flex-grow: 1 !important;
+}

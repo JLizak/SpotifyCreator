@@ -1,0 +1,23 @@
+.container {
+    background-color: rgb(255, 255, 255);
+    margin-top: 64px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    border-radius: 20px;
+  }
+  
+  .form {
+    margin-top: 16px !important;
+    width: 100% !important ;
+  }
+  
+  .error {
+    color: red !important;
+    font-size: 0.875rem !important;
+  }
+
+  .label{
+    margin-top: 30px !important;
+    font-size: large !important;
+  }

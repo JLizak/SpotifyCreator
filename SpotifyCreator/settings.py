@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 
     "base.apps.BaseConfig",
+    "rest_framework",
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
@@ -49,7 +51,22 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5174",
+    "http://localhost:8000"
+]
+
+CORS_ALLOW_CREDENTIALS = True
+
+SPOTIFY_CLIENT_ID = '61a2eb7c3e4346808de27de2d79c6975'
+SPOTIFY_CLIENT_SECRET = '33ccd3d5f63c4f08a9d2a7499db1780b'
+SPOTIFY_REDIRECT_URL = 'http://localhost:5174/spotify-callback'
+
+AUTH_USER_MODEL = 'base.User'
 
 ROOT_URLCONF = "SpotifyCreator.urls"
 

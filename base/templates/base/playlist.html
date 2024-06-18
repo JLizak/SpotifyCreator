@@ -5,12 +5,12 @@
   <div>
     {% for song in playlist.songs.all %}
     <div>
-        <h5>{{song.name}} by {{song.artist}}</h5>
+      <h5>{{song.name}} by {{song.artist}}</h5>
     </div>
     {% endfor %}
   </div>
   <div>
-    <a href="{% url  'base:edit' playlist.id%}"">Edit</a>
+    <a href="{% url  'base:edit' playlist.id%}"">Edis</a>
   </div>
   <div>
     <a href="{% url  'base:delete' playlist.id%}"">Delete</a>
